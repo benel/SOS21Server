@@ -1,7 +1,7 @@
 Actions
 -------
 
-# A character buys a glass yoghurt pot:
+# A character buys a glass yogurt pot:
 
 POST /
 {
@@ -26,4 +26,26 @@ GET _rewrite/effects_by_place/parisDairy
 # Effects on the whole world:
 
 GET _rewrite/effects/
+
+
+Position
+--------
+
+# Ongoing moves in a place
+
+GET /_changes
+
+GET /_changes?feed=continuous&since=LAST_SEQ&filter=sos21/place&place=parisDairy
+
+# A character moves
+
+PUT /Galaad_II
+
+{
+  "loggedOn": true,
+  "place": "parisDairy",
+  "x": 26,
+  "y": 18
+}
+
 
