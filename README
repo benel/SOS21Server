@@ -1,0 +1,29 @@
+Actions
+-------
+
+# A character buys a glass yoghurt pot:
+
+POST /
+{
+   "character": "Galaad_II",
+   "verb": "buyGlassYogurtPot",
+   "timestamp": "2011-02-04 18:02:45",
+   "place": "parisDairy",
+   "effects": {
+       "economy": -5,
+       "environment": 5
+   }
+}
+
+# Effects on the character (aka points):
+
+GET _rewrite/effects_by_character/Galaad_II
+
+# Effects on the place:
+
+GET _rewrite/effects_by_place/parisDairy
+
+# Effects on the whole world:
+
+GET _rewrite/effects/
+

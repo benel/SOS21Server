@@ -1,0 +1,26 @@
+[
+  {
+    "from": "effects",
+    "to": "_view/effects",
+    "query": {
+      "group": true
+    }
+  }, {
+    "from": "effects_by_place/:place",
+    "to": "_view/effects_by_place",
+    "query": {
+      "startkey": [":place"], 
+      "endkey": [":place", {}], 
+      "group": true
+    }
+  }, {
+    "from": "effects_by_character/:character",
+    "to": "_view/effects_by_character",
+    "query": {
+      "startkey": [":character"], 
+      "endkey": [":character", {}], 
+      "group": true
+    }
+  }
+]
+
