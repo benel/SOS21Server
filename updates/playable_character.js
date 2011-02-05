@@ -1,4 +1,5 @@
-function(o, req) {
+function(old, req) {
+  var o = JSON.parse(req.body);
   const timestamp = new Date();
   o.updatedAt = [
     timestamp.getFullYear(), 
