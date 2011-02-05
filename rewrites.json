@@ -35,6 +35,23 @@
       "include_docs": true,
       "key": [":place"]
     }
+  }, {
+    "from": "_changes_on_place/:place",
+    "to": "../../_changes",
+    "query": {
+      "feed": "longpoll",
+      "filter": "sos21/place"
+    }
+  }, {
+    "method": "POST",
+    "from": "",
+    "to": "../../"
+  }, {
+    "from": "away_from_keyboard",
+    "to": "_view/away_from_keyboard",
+    "query": {
+      "descending": true
+    }
   }
 ]
 

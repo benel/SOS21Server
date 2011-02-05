@@ -56,14 +56,19 @@ GET /characters_by_place/parisDairy
 
 * Online characters sorted by the last time they moved
 
-GET /away_from_keyboard?descending=true
+GET /away_from_keyboard
 
 
 Ongoing actions and moves in a place
 ====================================
 
-GET /_changes
+GET /_changes_on_place/parisDairy
+    {"results":[
+      ...
+    ], "last_seq":133}
 
-GET /_changes?feed=continuous&since=LAST_SEQ&filter=sos21/place&place=parisDairy
-
+GET /_changes_on_place/parisDairy?since=133&include_docs=true
+    {"results":[
+      {"seq":134,"id":"Galaad_II","changes":[{"rev":"69-fff025faf303bcedadbbd34c6fb0eb37"}],"doc":{"_id":"Galaad_II","_rev":"69-fff025faf303bcedadbbd34c6fb0eb37","loggedOn":true,"place":"parisDairy","x":29,"y":17,"updatedAt":[2011,2,5,18,54]}}
+    ], "last_seq":134}
 
