@@ -32,8 +32,13 @@ GET /effects_by_place/parisDairy
 GET /effects/
 
 
-Position
-========
+Locations
+=========
+
+* Characters locations in a place
+
+GET /characters_by_place/parisDairy
+
 
 * Ongoing moves in a place
 
@@ -54,10 +59,6 @@ PUT /playable_character/Galaad_II
       "x": 26,
       "y": 18
     }
-
-
-Away from keyboard
-==================
 
 * Online characters sorted by the last time they moved
 

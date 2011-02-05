@@ -28,6 +28,13 @@
   }, {
     "from": "playable_character/*",
     "to": "../../*"
+  }, {
+    "from": "characters_by_place/:place",
+    "to": "_view/characters_by_place",
+    "query": {
+      "include_docs": true,
+      "key": [":place"]
+    }
   }
 ]
 
