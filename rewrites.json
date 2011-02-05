@@ -21,6 +21,13 @@
       "endkey": [":character", {}], 
       "group": true
     }
+  }, {
+    "from": "playable_character/*",
+    "method": "PUT",
+    "to": "_update/playable_character/*"
+  }, {
+    "from": "playable_character/*",
+    "to": "../../*"
   }
 ]
 

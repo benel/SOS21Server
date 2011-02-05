@@ -39,7 +39,7 @@ GET /_changes?feed=continuous&since=LAST_SEQ&filter=sos21/place&place=parisDairy
 
 # A character moves
 
-PUT /Galaad_II
+PUT _rewrite/playable_character/Galaad_II
 
 {
   "loggedOn": true,
@@ -48,4 +48,11 @@ PUT /Galaad_II
   "y": 18
 }
 
+
+Away from keyboard
+------------------
+
+# Online characters sorted by the last time they moved.
+
+GET _view/away_from_keyboard?descending=true
 
