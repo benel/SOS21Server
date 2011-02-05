@@ -35,19 +35,7 @@ GET /effects/
 Locations
 =========
 
-* Characters locations in a place
-
-GET /characters_by_place/parisDairy
-
-
-* Ongoing moves in a place
-
-GET /_changes
-
-GET /_changes?feed=continuous&since=LAST_SEQ&filter=sos21/place&place=parisDairy
-
-
-* A character moves
+* A character moves (or logs on)
 
 GET /playable_character/Galaad_II
 
@@ -60,6 +48,22 @@ PUT /playable_character/Galaad_II
       "y": 18
     }
 
+
+* Characters locations in a place
+
+GET /characters_by_place/parisDairy
+
+
 * Online characters sorted by the last time they moved
 
 GET /away_from_keyboard?descending=true
+
+
+Ongoing actions and moves in a place
+====================================
+
+GET /_changes
+
+GET /_changes?feed=continuous&since=LAST_SEQ&filter=sos21/place&place=parisDairy
+
+
