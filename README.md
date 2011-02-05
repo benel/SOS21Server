@@ -1,7 +1,7 @@
 Actions
 =======
 
-* Character "Galaad II" buys a "glass yogurt pot"
+* Character "Galaad II" buys a "glass yogurt pot" in "Paris Dairy"
 
 POST /
 
@@ -16,7 +16,7 @@ POST /
       }
     }
 
-* Effects on the character "Galaad II" (aka points)
+* Global effects from the actions carried out by "Galaad II" (aka points)
 
 GET /effects_by_character/Galaad_II
     {"rows":[
@@ -25,7 +25,7 @@ GET /effects_by_character/Galaad_II
     ]}
 
 
-* Effects on the place "Paris Dairy"
+* Global effects from the actions carried out in "Paris Dairy"
 
 GET /effects_by_place/parisDairy
     {"rows":[
@@ -34,7 +34,7 @@ GET /effects_by_place/parisDairy
     ]}
 
 
-* Effects on the whole world
+* Global effects of all actions
 
 GET /effects
     {"rows":[
